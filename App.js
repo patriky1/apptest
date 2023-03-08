@@ -1,5 +1,5 @@
-
-import React  from 'react';
+import { StatusBar } from 'expo-status-bar';
+import React, { useState } from 'react';
 import { StyleSheet, Image, SafeAreaView, View  } from 'react-native';
 import Login from './components/login/login';
 
@@ -8,9 +8,12 @@ import Login from './components/login/login';
 export default function App() {
   return (
     <>
+    
     <View style={styles.container}>      
-
-    <Image source={require("./components/imagens/logo1.png")} bottom={"35%"}/>
+    <Image source={require("./components/imagens/logo1.png")} />
+    </View>
+    <View style={styles.login1}>
+    <Login/>
     </View>
     <View style={styles.retangle}>
     <Image source={require("./components/imagens/Rectangle1.png")} />
@@ -18,7 +21,7 @@ export default function App() {
     <View style={styles.circle}>
     <Image source={require("./components/imagens/circle1.png")} />
     </View>
-    <View>{Login}</View>
+   
     <View style={styles.circle1}>
     <Image source={require("./components/imagens/circle1.png")} />
     </View>
@@ -38,6 +41,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    bottom:"35%",
+    margin:0,
+    padding:0
   },
   retangle:{
     position:"absolute",
@@ -63,4 +69,9 @@ const styles = StyleSheet.create({
     
     
   },
+  login1:{
+  position:"absolute",
+  left:"32%"
+
+  }
 });
